@@ -1,26 +1,101 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bone: #faf8f5;
+  --blood: #9b111e;
+  --charcoal: #111111;
+  --warm-gray: #e8e3dc;
+  --glass-surface: rgba(255, 255, 255, 0.52);
+  --glass-border: rgba(255, 255, 255, 0.36);
+  --glass-dark-surface: rgba(17, 17, 17, 0.42);
+  --glass-dark-border: rgba(255, 255, 255, 0.12);
+  --shadow-soft: 0 24px 80px rgba(17, 17, 17, 0.08);
+  --shadow-glass: 0 8px 32px rgba(17, 17, 17, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+  --shadow-elevated: 0 32px 64px rgba(17, 17, 17, 0.12);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-bone: var(--bone);
+  --color-blood: var(--blood);
+  --color-charcoal: var(--charcoal);
+  --color-warm-gray: var(--warm-gray);
+  --color-glass-surface: var(--glass-surface);
+  --color-glass-border: var(--glass-border);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-cormorant);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--bone);
+    color: var(--charcoal);
+    font-family: var(--font-geist-sans), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--blood) 18%, transparent);
+    color: var(--charcoal);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .glass {
+    background: var(--glass-surface);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(24px) saturate(1.4);
+    -webkit-backdrop-filter: blur(24px) saturate(1.4);
+    box-shadow: var(--shadow-glass);
+  }
+
+  .glass-dark {
+    background: var(--glass-dark-surface);
+    border: 1px solid var(--glass-dark-border);
+    backdrop-filter: blur(28px) saturate(1.2);
+    -webkit-backdrop-filter: blur(28px) saturate(1.2);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.24);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .engraving-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%239B111E' stroke-opacity='0.04' stroke-width='0.5'%3E%3Cpath d='M0 30h60M30 0v60'/%3E%3Cpath d='M0 0l60 60M60 0L0 60'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .hero-gradient {
+    background: radial-gradient(
+        ellipse 80% 60% at 70% 40%,
+        rgba(155, 17, 30, 0.14) 0%,
+        transparent 55%
+      ),
+      radial-gradient(
+        ellipse 50% 40% at 20% 80%,
+        rgba(232, 227, 220, 0.8) 0%,
+        transparent 50%
+      ),
+      linear-gradient(165deg, #0d0d0d 0%, #1a1816 42%, #111111 100%);
+  }
+
+  .section-fade {
+    background: linear-gradient(
+      180deg,
+      var(--charcoal) 0%,
+      #1a1816 8%,
+      var(--bone) 18%
+    );
+  }
 }

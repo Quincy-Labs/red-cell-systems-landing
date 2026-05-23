@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Red Cell Systems
 
-## Getting Started
+Premium marketing site for Red Cell Systems — an AI-native biomedical intelligence company.
 
-First, run the development server:
+## Stack
+
+- [Bun](https://bun.sh)
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- Framer Motion
+- shadcn/ui patterns (CVA, `cn` utility)
+- Lucide Icons
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
+bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command        | Description          |
+| -------------- | -------------------- |
+| `bun run dev`  | Start dev server     |
+| `bun run build`| Production build     |
+| `bun run start`| Start production     |
+| `bun run lint` | Run ESLint           |
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/              # Layout, page, global styles
+├── components/
+│   ├── navigation/   # Navbar
+│   ├── hero/         # Hero section
+│   ├── sections/     # Page sections
+│   ├── footer/       # Footer
+│   └── ui/           # Reusable UI primitives
+└── lib/              # Utilities
+public/
+└── rcs-logo.png          # Official brand mark — updated logo (do not alter)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Design system
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Colors, typography, and motion are derived from the official Red Cell Systems logo. See `src/app/globals.css` for design tokens.
 
-## Deploy on Vercel
+**Fonts:** Cormorant Garamond (headlines), Geist (body)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Brand colors:** Bone `#FAF8F5`, Blood `#9B111E`, Charcoal `#111111`, Warm Gray `#E8E3DC`
