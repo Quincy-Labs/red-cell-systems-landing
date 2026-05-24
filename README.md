@@ -22,6 +22,13 @@ bun run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+### Contact form (Resend)
+
+Submissions are emailed to `hogedegbe@gmail.com` via [Resend](https://resend.com). Copy `env.example` to `.env.local` and set:
+
+- `RESEND_API_KEY` — from the Resend dashboard
+- `RESEND_FROM_EMAIL` — a verified sender (use `Red Cell Systems <onboarding@resend.dev>` while testing)
+
 ## Scripts
 
 | Command        | Description          |
@@ -44,7 +51,8 @@ src/
 │   └── ui/           # Reusable UI primitives
 └── lib/              # Utilities
 public/
-└── rcs-logo.png          # Official brand mark — updated logo (do not alter)
+├── rcs-logo-red.svg      # Official brand mark (nav, footer)
+└── rcs-logo.png          # Raster logo (social previews)
 ```
 
 ## Design system

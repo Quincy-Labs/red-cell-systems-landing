@@ -68,6 +68,14 @@
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.24);
   }
 
+  .glass-dark-strong {
+    background: rgba(17, 17, 17, 0.62);
+    border: 1px solid var(--glass-dark-border);
+    backdrop-filter: blur(28px) saturate(1.2);
+    -webkit-backdrop-filter: blur(28px) saturate(1.2);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
+  }
+
   .text-balance {
     text-wrap: balance;
   }

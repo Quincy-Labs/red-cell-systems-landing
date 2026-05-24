@@ -94,14 +94,6 @@ export function PlatformArchitecture() {
                     </p>
                   </div>
                 </div>
-
-                <motion.div
-                  className="absolute -left-3 top-1/2 hidden h-2 w-2 -translate-y-1/2 rounded-full bg-blood lg:block"
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 + 0.3 }}
-                />
               </motion.div>
 
               {index < steps.length - 1 && (

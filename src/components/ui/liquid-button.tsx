@@ -39,6 +39,7 @@ export interface LiquidButtonProps
   className?: string;
   onClick?: () => void;
   type?: "button" | "submit";
+  disabled?: boolean;
 }
 
 export function LiquidButton({
@@ -49,6 +50,7 @@ export function LiquidButton({
   className,
   onClick,
   type = "button",
+  disabled = false,
 }: LiquidButtonProps) {
   const classes = cn(buttonVariants({ variant, size }), className);
 
@@ -72,6 +74,7 @@ export function LiquidButton({
     <motion.button
       type={type}
       onClick={onClick}
+      disabled={disabled}
       className={classes}
       {...motionProps}
     >

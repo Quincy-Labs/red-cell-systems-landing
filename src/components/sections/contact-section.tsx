@@ -12,10 +12,44 @@ const inputClass =
 
 export function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setError(null);
+    setLoading(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName: formData.get("firstName"),
+          lastName: formData.get("lastName"),
+          email: formData.get("email"),
+          organization: formData.get("organization"),
+          message: formData.get("message"),
+        }),
+      });
+
+      const data = (await response.json()) as { error?: string };
+
+      if (!response.ok) {
+        setError(data.error ?? "Something went wrong. Please try again.");
+        return;
+      }
+
+      setSubmitted(true);
+      form.reset();
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -60,6 +94,15 @@ export function ContactSection() {
                 Contact form
               </h3>
 
+              {error && (
+                <p
+                  className="rounded-xl border border-blood/20 bg-blood/5 px-4 py-3 text-sm text-blood"
+                  role="alert"
+                >
+                  {error}
+                </p>
+              )}
+
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
                   <label
@@ -73,6 +116,7 @@ export function ContactSection() {
                     name="firstName"
                     type="text"
                     required
+                    disabled={loading}
                     autoComplete="given-name"
                     className={inputClass}
                     placeholder="Jane"
@@ -90,6 +134,7 @@ export function ContactSection() {
                     name="lastName"
                     type="text"
                     required
+                    disabled={loading}
                     autoComplete="family-name"
                     className={inputClass}
                     placeholder="Smith"
@@ -109,6 +154,7 @@ export function ContactSection() {
                   name="email"
                   type="email"
                   required
+                  disabled={loading}
                   autoComplete="email"
                   className={inputClass}
                   placeholder="jane@organization.org"
@@ -127,6 +173,7 @@ export function ContactSection() {
                   name="organization"
                   type="text"
                   required
+                  disabled={loading}
                   autoComplete="organization"
                   className={inputClass}
                   placeholder="Your institution or company"
@@ -144,14 +191,21 @@ export function ContactSection() {
                   id="message"
                   name="message"
                   required
+                  disabled={loading}
                   rows={4}
                   className={cn(inputClass, "resize-none")}
                   placeholder="Describe your goals and how we might collaborate..."
                 />
               </div>
 
-              <LiquidButton type="submit" variant="primary" size="lg" className="w-full sm:w-auto">
-                Send message
+              <LiquidButton
+                type="submit"
+                variant="primary"
+                size="lg"
+                className="w-full sm:w-auto"
+                disabled={loading}
+              >
+                {loading ? "Sending…" : "Send message"}
                 <Send className="h-4 w-4" aria-hidden />
               </LiquidButton>
             </form>

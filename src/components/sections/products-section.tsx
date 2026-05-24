@@ -65,14 +65,19 @@ export function ProductsSection() {
               }}
             >
               <GlassCard className="group relative h-full overflow-hidden">
-                <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-blood/5 transition-transform duration-700 group-hover:scale-150" />
-                <product.icon
-                  className="mb-6 h-6 w-6 text-blood"
-                  strokeWidth={1.25}
-                />
+                <div
+                  className="pointer-events-none absolute -right-8 -top-8 flex h-32 w-32 items-center justify-center"
+                  aria-hidden
+                >
+                  <div className="absolute inset-0 rounded-full bg-blood/5 transition-transform duration-700 group-hover:scale-150" />
+                  <product.icon
+                    className="relative h-6 w-6 text-blood"
+                    strokeWidth={1.25}
+                  />
+                </div>
                 <h3
+                  className="pr-14 font-serif text-2xl font-medium text-charcoal"
                   id={index === 0 ? "products-heading" : undefined}
-                  className="font-serif text-2xl font-medium text-charcoal"
                 >
                   {product.name}
                 </h3>

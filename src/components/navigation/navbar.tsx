@@ -18,6 +18,7 @@ const navLinks = [
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [overHero, setOverHero] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
@@ -28,11 +29,25 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
+    const hero = document.getElementById("hero");
+    if (!hero) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setOverHero(entry.isIntersecting),
+      { threshold: 0, rootMargin: "-1px 0px 0px 0px" },
+    );
+    observer.observe(hero);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
   }, [mobileOpen]);
+
+  const onDark = overHero;
 
   return (
     <>
@@ -48,19 +63,36 @@ export function Navbar() {
           aria-label="Main navigation"
           className={cn(
             "mx-auto flex max-w-7xl items-center justify-between rounded-2xl px-4 py-3 transition-all duration-500 md:px-6",
-            scrolled
-              ? "glass-dark text-bone shadow-lg"
-              : "border border-white/10 bg-white/5 text-bone backdrop-blur-xl",
+            onDark
+              ? cn(
+                  "glass-dark-strong text-bone",
+                  scrolled ? "shadow-lg" : "shadow-md",
+                )
+              : cn("glass text-charcoal", scrolled ? "shadow-lg" : "shadow-md"),
           )}
         >
-          <Logo size="sm" className="text-bone [&_span]:text-bone" />
+          <Logo
+            size="sm"
+            variant="red"
+            invert={onDark}
+            className={
+              onDark
+                ? "text-bone [&_span]:text-bone"
+                : "text-charcoal [&_span]:text-charcoal"
+            }
+          />
 
           <ul className="hidden items-center gap-1 lg:flex">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="rounded-full px-4 py-2 text-xs font-medium uppercase tracking-[0.14em] text-bone/75 transition-colors hover:bg-white/10 hover:text-bone"
+                  className={cn(
+                    "rounded-full px-4 py-2 text-xs font-medium uppercase tracking-[0.14em] transition-colors",
+                    onDark
+                      ? "text-bone/85 hover:bg-white/10 hover:text-bone"
+                      : "text-charcoal/70 hover:bg-charcoal/5 hover:text-charcoal",
+                  )}
                 >
                   {link.label}
                 </Link>
@@ -69,14 +101,23 @@ export function Navbar() {
           </ul>
 
           <div className="hidden lg:block">
-            <LiquidButton href="#contact" variant="ghost" size="sm">
+            <LiquidButton
+              href="#contact"
+              variant={onDark ? "ghost" : "outline"}
+              size="sm"
+            >
               Get in touch
             </LiquidButton>
           </div>
 
           <button
             type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-bone lg:hidden"
+            className={cn(
+              "flex h-10 w-10 items-center justify-center rounded-full border lg:hidden",
+              onDark
+                ? "border-white/15 text-bone"
+                : "border-charcoal/15 text-charcoal",
+            )}
             onClick={() => setMobileOpen((o) => !o)}
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}

@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     images: [{ url: "/rcs-logo.png", width: 1024, height: 1024, alt: "Red Cell Systems" }],
   },
   icons: {
-    icon: "/rcs-logo.png",
-    apple: "/rcs-logo.png",
+    icon: "/rcs-logo-red.svg",
+    apple: "/rcs-logo-red.svg",
   },
 };
 

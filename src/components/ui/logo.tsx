@@ -7,12 +7,19 @@ interface LogoProps {
   size?: "sm" | "md" | "lg";
   showWordmark?: boolean;
   href?: string;
+  variant?: "red" | "black";
+  invert?: boolean;
 }
 
+const logoSrc = {
+  red: "/rcs-logo-red.svg",
+  black: "/rcs-logo-black.svg",
+} as const;
+
 const sizes = {
-  sm: { image: 36, text: "text-sm" },
-  md: { image: 44, text: "text-base" },
-  lg: { image: 56, text: "text-lg" },
+  sm: { image: 80, text: "text-sm" },
+  md: { image: 80, text: "text-base" },
+  lg: { image: 64, text: "text-lg" },
 };
 
 export function Logo({
@@ -20,6 +27,8 @@ export function Logo({
   size = "md",
   showWordmark = true,
   href = "/",
+  variant = "red",
+  invert = false,
 }: LogoProps) {
   const { image, text } = sizes[size];
 
@@ -31,11 +40,15 @@ export function Logo({
       )}
     >
       <Image
-        src="/rcs-logo.png"
+        src={logoSrc[variant]}
         alt="Red Cell Systems"
         width={image}
         height={image}
-        className="shrink-0 rounded-sm object-contain"
+        unoptimized={logoSrc[variant].endsWith(".svg")}
+        className={cn(
+          "shrink-0 object-contain",
+          invert && "brightness-0 invert",
+        )}
         priority
       />
       {showWordmark && (
