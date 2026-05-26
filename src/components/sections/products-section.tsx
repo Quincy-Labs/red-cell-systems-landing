@@ -1,53 +1,53 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Activity, BookOpen, Microscope, Users } from "lucide-react";
+import { FileHeart, Clock, FileText, Share2 } from "lucide-react";
 import { GlassCard } from "@/components/ui/glass-card";
 import { SectionHeading } from "@/components/ui/section-heading";
 
 const products = [
   {
-    icon: Activity,
-    name: "Patient Intelligence",
-    tagline: "Care that understands the whole person",
+    icon: FileHeart,
+    name: "Emergency Passport",
+    tagline: "Trusted context for crisis moments",
     description:
-      "Unify longitudinal health records, social determinants, and patient voice into intelligence that clinicians and patients can trust.",
+      "A patient-controlled summary containing medications, allergies, care plans, providers, and crisis instructions — ready to share the moment care begins.",
   },
   {
-    icon: BookOpen,
-    name: "Research Intelligence",
-    tagline: "Discovery at the speed of curiosity",
+    icon: Clock,
+    name: "Crisis Timeline",
+    tagline: "Longitudinal history at a glance",
     description:
-      "Agents that traverse literature, trials, and datasets—surfacing hypotheses and connections that manual review cannot scale to reach.",
+      "Pain episodes, ER visits, treatments, and outcomes — tracked over time so providers see patterns instead of isolated events.",
   },
   {
-    icon: Microscope,
-    name: "Clinical Intelligence",
-    tagline: "Rigor where decisions are made",
+    icon: FileText,
+    name: "Visit Prep Summary",
+    tagline: "Context before every appointment",
     description:
-      "Evidence-linked reasoning at the point of care, with provenance, confidence scoring, and workflows designed for clinical environments.",
+      "A structured summary patients share before clinic visits or advocacy calls — reducing repetition and giving care teams the history they need to act.",
   },
   {
-    icon: Users,
-    name: "Population Intelligence",
-    tagline: "Patterns that protect communities",
+    icon: Share2,
+    name: "Partner View",
+    tagline: "Consented access for care partners",
     description:
-      "Aggregate signals across populations to identify risk, equity gaps, and intervention opportunities before they become crises.",
+      "Navigators, CBOs, and clinics receive only the context patients choose to share — with clear consent and no back-channel access.",
   },
 ];
 
 export function ProductsSection() {
   return (
     <section
-      id="products"
+      id="product"
       className="relative px-6 py-28 md:px-10 md:py-36 lg:px-12"
       aria-labelledby="products-heading"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Products"
-          title="Intelligence across every dimension of health"
-          description="Modular capabilities that share a common knowledge foundation—deployed together or integrated into your existing stack."
+          eyebrow="The first wedge"
+          title="The tools that preserve patient context"
+          description="Everything a patient needs to carry their story — and everything a care team needs to understand it."
           className="mb-16 md:mb-20"
         />
 

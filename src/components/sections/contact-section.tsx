@@ -61,8 +61,8 @@ export function ContactSection() {
       <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-2 lg:gap-24">
         <SectionHeading
           eyebrow="Contact"
-          title="Begin the conversation"
-          description="Tell us about your organization and the intelligence challenges you're ready to solve together."
+          title="Start the conversation"
+          description="We work with organizations supporting sickle cell patients across care, navigation, advocacy, and community health. Tell us where continuity breaks down today."
         />
 
         <motion.div
@@ -81,7 +81,7 @@ export function ContactSection() {
                 Thank you for reaching out.
               </p>
               <p className="mt-4 text-charcoal/60">
-                Our team will respond within two business days.
+                We will respond within two business days.
               </p>
             </div>
           ) : (
@@ -176,7 +176,7 @@ export function ContactSection() {
                   disabled={loading}
                   autoComplete="organization"
                   className={inputClass}
-                  placeholder="Your institution or company"
+                  placeholder="Your clinic, CBO, or program"
                 />
               </div>
 
@@ -194,7 +194,7 @@ export function ContactSection() {
                   disabled={loading}
                   rows={4}
                   className={cn(inputClass, "resize-none")}
-                  placeholder="Describe your goals and how we might collaborate..."
+                  placeholder="Tell us about the patients you serve and where context breaks down..."
                 />
               </div>
 

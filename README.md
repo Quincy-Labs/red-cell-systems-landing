@@ -1,6 +1,6 @@
 # Red Cell Systems
 
-Premium marketing site for Red Cell Systems — an AI-native biomedical intelligence company.
+Marketing site for Red Cell Systems — patient-owned chronic care memory infrastructure, starting with sickle cell disease.
 
 ## Stack
 

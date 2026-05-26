@@ -15,8 +15,8 @@ export function WhyRedCell() {
       <div className="relative mx-auto max-w-7xl">
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center lg:gap-24">
           <SectionHeading
-            eyebrow="Why Red Cell Systems"
-            title="Understanding, not just data"
+            eyebrow="Why now"
+            title="Healthcare remembers records. Patients remember reality."
             className="lg:mb-0"
           />
 
@@ -37,7 +37,7 @@ export function WhyRedCell() {
               id="why-heading"
               className="relative font-serif text-3xl font-light italic leading-snug text-charcoal md:text-4xl"
             >
-              Most healthcare systems generate data. Few generate understanding.
+              The most important clinical context often exists outside the medical record.
             </p>
           </motion.blockquote>
         </div>
@@ -50,20 +50,21 @@ export function WhyRedCell() {
           className="mt-16 max-w-3xl space-y-6 text-lg leading-relaxed text-charcoal/65"
         >
           <p>
-            Healthcare has never lacked information. It has lacked the
-            connective tissue—the graphs, agents, and intelligence layers that
-            turn isolated facts into coherent understanding.
+            EHRs capture what happens inside visits. Patients carry everything
+            between them — medication changes, crises managed at home,
+            transportation barriers, caregiver observations, the lived
+            experience that shapes what care should look like next.
           </p>
           <p>
-            Red Cell Systems builds that layer. We design AI-native
-            infrastructure with the scientific rigor of a research institution
-            and the human-centered care of those who sit beside patients every
-            day.
+            Red Cell Systems bridges the gap between system data and patient
+            reality. We help patients preserve a trusted, longitudinal record
+            that moves with them — across providers, organizations, and crises.
           </p>
           <p>
-            Our platform does not replace clinical judgment. It extends it—
-            giving teams the confidence to act on intelligence that is
-            traceable, explainable, and built for the long arc of medicine.
+            We start with sickle cell because the distance between what patients
+            know and what systems retain is at its widest. The cost of that gap
+            is measured in delayed treatment, repeated trauma, and preventable
+            suffering.
           </p>
         </motion.div>
       </div>

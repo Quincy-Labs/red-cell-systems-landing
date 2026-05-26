@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import {
+  Heart,
+  Users,
   Building2,
-  Dna,
-  FlaskConical,
-  HeartHandshake,
+  HandCoins,
 } from "lucide-react";
 import { GlassCard } from "@/components/ui/glass-card";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -13,28 +13,28 @@ import { cn } from "@/lib/utils";
 
 const audiences = [
   {
+    icon: Heart,
+    title: "Patients",
+    description:
+      "Repeating complex histories during crisis. Facing treatment delays because no one has the full picture. Carrying the cognitive burden that systems should hold.",
+  },
+  {
+    icon: Users,
+    title: "Navigators & CBOs",
+    description:
+      "Rebuilding patient history at every interaction. No continuity between touchpoints. Supporting patients without seeing what happened since last contact.",
+  },
+  {
     icon: Building2,
-    title: "Health Systems",
+    title: "Clinics & SCD Centers",
     description:
-      "Enterprise-grade intelligence that connects EHR data, operational workflows, and clinical decision support into a unified understanding layer.",
+      "Seeing isolated visits instead of full patient journeys. Limited visibility into crises, ER encounters, and community support that happen between appointments.",
   },
   {
-    icon: Dna,
-    title: "Biotech Teams",
+    icon: HandCoins,
+    title: "Payers & Partners",
     description:
-      "Accelerate target discovery and trial design with research intelligence that spans publications, omics, and real-world evidence.",
-  },
-  {
-    icon: FlaskConical,
-    title: "Research Organizations",
-    description:
-      "Transform siloed studies into living knowledge graphs that agents can query, synthesize, and extend across disciplines.",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Patient Communities",
-    description:
-      "Patient-centered intelligence that respects autonomy, improves navigation, and turns lived experience into actionable insight.",
+      "Unable to measure continuity or outcomes because context is fragmented across providers, organizations, and time.",
   },
 ];
 
@@ -57,16 +57,16 @@ const item = {
 export function WhoWeServe() {
   return (
     <section
-      id="solutions"
+      id="context"
       className="relative px-6 py-28 md:px-10 md:py-36 lg:px-12"
       aria-labelledby="who-we-serve-heading"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Who we serve"
+          eyebrow="Where context breaks"
           titleId="who-we-serve-heading"
-          title="Built for those who move medicine forward"
-          description="Red Cell Systems partners with organizations at the intersection of care, science, and human experience."
+          title="Everyone loses when patient memory is fragmented"
+          description="Sickle cell care involves dozens of touchpoints — ER, hematology, primary care, community organizations, navigators, payers. Context disappears at every handoff."
           className="mb-16 md:mb-20"
         />
 

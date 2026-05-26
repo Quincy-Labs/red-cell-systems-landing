@@ -9,10 +9,10 @@ import { LiquidButton } from "@/components/ui/liquid-button";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { label: "Platform", href: "#platform" },
-  { label: "Solutions", href: "#solutions" },
-  { label: "Research", href: "#products" },
-  { label: "Pilot Program", href: "#pilot" },
+  { label: "Problem", href: "#problem" },
+  { label: "Product", href: "#product" },
+  { label: "Trust", href: "#trust" },
+  { label: "Pilot", href: "#pilot" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -102,11 +102,11 @@ export function Navbar() {
 
           <div className="hidden lg:block">
             <LiquidButton
-              href="#contact"
+              href="#pilot"
               variant={onDark ? "ghost" : "outline"}
               size="sm"
             >
-              Get in touch
+              Join the Pilot
             </LiquidButton>
           </div>
 
@@ -158,11 +158,11 @@ export function Navbar() {
                 </motion.div>
               ))}
               <LiquidButton
-                href="#contact"
+                href="#pilot"
                 variant="primary"
                 onClick={() => setMobileOpen(false)}
               >
-                Get in touch
+                Join the Pilot
               </LiquidButton>
             </motion.div>
           </motion.div>

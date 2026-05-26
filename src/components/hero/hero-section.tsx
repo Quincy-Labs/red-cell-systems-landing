@@ -36,26 +36,27 @@ export function HeroSection() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           >
             <p className="mb-6 text-xs font-medium uppercase tracking-[0.22em] text-bone/50">
-              AI-native biomedical intelligence
+              Continuity of care, preserved
             </p>
             <h1
               id="hero-heading"
               className="font-serif text-4xl font-light leading-[1.08] tracking-tight text-bone sm:text-5xl md:text-6xl lg:text-[4.25rem]"
             >
-              Intelligence for the next generation of healthcare.
+              The missing context layer for chronic care.
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-bone/65 md:text-xl">
-              AI agents, biomedical infrastructure, and patient-centered systems
-              designed to accelerate discovery, improve care, and transform
-              fragmented health data into living intelligence.
+              Critical health information is often scattered across providers,
+              visits, and organizations. Patients become responsible for carrying
+              the context healthcare systems fail to preserve. Red Cell Systems
+              helps them keep a trusted history wherever care happens.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <LiquidButton href="#platform" variant="primary" size="lg">
-                Explore Platform
+              <LiquidButton href="#pilot" variant="primary" size="lg">
+                Join the Pilot
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </LiquidButton>
-              <LiquidButton href="#pilot" variant="ghost" size="lg">
-                Become a Design Partner
+              <LiquidButton href="#product" variant="ghost" size="lg">
+                See the Emergency Passport
               </LiquidButton>
             </div>
           </motion.div>

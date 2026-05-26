@@ -28,9 +28,9 @@ export function PilotProgram() {
           className="glass mx-auto max-w-4xl rounded-3xl border border-glass-border p-10 md:p-16"
         >
           <SectionHeading
-            eyebrow="Design Partner Program"
-            title="Become a Design Partner"
-            description="Work directly with Red Cell Systems to shape the future of biomedical intelligence."
+            eyebrow="Pilot program"
+            title="Help shape the future of continuity of care."
+            description="We are co-designing workflows with organizations that serve sickle cell patients — learning from real care environments to build tools that work."
             align="center"
             className="mx-auto"
           />
@@ -39,15 +39,29 @@ export function PilotProgram() {
             id="pilot-heading"
             className="mx-auto mt-8 max-w-2xl text-center text-base leading-relaxed text-charcoal/60 md:text-lg"
           >
-            We are opening a limited number of pilot partnerships with clinical,
-            research, and patient-centered organizations. Partners receive early
-            access, dedicated engineering support, and a voice in how the
-            platform evolves.
+            Community-based organizations, sickle cell centers, clinics,
+            navigation programs, and advocacy groups — if your team supports
+            sickle cell patients and continuity is a challenge, we want to build
+            with you.
           </p>
+
+          <ul className="mx-auto mt-8 max-w-xl space-y-3 text-sm text-charcoal/55 md:text-base">
+            {[
+              "Early access to Emergency Passport and Crisis Timeline",
+              "Dedicated support during pilot",
+              "Direct founder feedback channel",
+              "No cost during pilot phase",
+            ].map((benefit) => (
+              <li key={benefit} className="flex gap-3">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blood" aria-hidden />
+                {benefit}
+              </li>
+            ))}
+          </ul>
 
           <div className="mt-10 flex justify-center">
             <LiquidButton href="#contact" variant="primary" size="lg">
-              Schedule a Discovery Call
+              Join the Pilot
             </LiquidButton>
           </div>
         </motion.div>

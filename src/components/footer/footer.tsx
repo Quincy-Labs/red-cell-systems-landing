@@ -2,10 +2,10 @@ import Link from "next/link";
 import { Logo } from "@/components/ui/logo";
 
 const footerLinks = [
-  { label: "Platform", href: "#platform" },
-  { label: "Solutions", href: "#solutions" },
-  { label: "Products", href: "#products" },
-  { label: "Pilot Program", href: "#pilot" },
+  { label: "Problem", href: "#problem" },
+  { label: "Product", href: "#product" },
+  { label: "Trust", href: "#trust" },
+  { label: "Pilot", href: "#pilot" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -18,8 +18,8 @@ export function Footer() {
         <div>
           <Logo size="md" className="text-charcoal [&_span]:text-charcoal" />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-charcoal/50">
-            AI-native biomedical intelligence for the next generation of
-            healthcare.
+            Patient-owned continuity infrastructure for chronic care. Starting
+            with sickle cell disease.
           </p>
         </div>
 
