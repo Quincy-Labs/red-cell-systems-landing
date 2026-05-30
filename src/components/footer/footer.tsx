@@ -18,8 +18,22 @@ export function Footer() {
         <div>
           <Logo size="md" className="text-charcoal [&_span]:text-charcoal" />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-charcoal/50">
-            Patient-owned continuity infrastructure for chronic care. Starting
-            with sickle cell disease.
+            The longitudinal context layer for sickle cell care.
+          </p>
+          <p className="mt-2 max-w-xs text-sm leading-relaxed text-charcoal/50">
+            Preserving patient context across providers, organizations, and
+            crises.
+          </p>
+          <p className="mt-4 text-sm text-charcoal/45">
+            A product of{" "}
+            <Link
+              href="https://www.quincylabs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-charcoal/60 underline decoration-charcoal/20 underline-offset-2 transition-colors hover:text-blood hover:decoration-blood/30"
+            >
+              Quincy Labs
+            </Link>
           </p>
         </div>
 

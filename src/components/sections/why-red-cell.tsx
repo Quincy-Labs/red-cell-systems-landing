@@ -52,7 +52,7 @@ export function WhyRedCell() {
           <p>
             EHRs capture what happens inside visits. Patients carry everything
             between them — medication changes, crises managed at home,
-            transportation barriers, caregiver observations, the lived
+            transportation barriers, caregiver observations, and the lived
             experience that shapes what care should look like next.
           </p>
           <p>

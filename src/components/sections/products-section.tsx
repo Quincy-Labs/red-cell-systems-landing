@@ -11,7 +11,7 @@ const products = [
     name: "Emergency Passport",
     tagline: "Trusted context for crisis moments",
     description:
-      "A patient-controlled summary containing medications, allergies, care plans, providers, and crisis instructions — ready to share the moment care begins.",
+      "A structured summary containing medications, allergies, baseline labs, care plans, providers, transfusion history, and crisis instructions — ready to share when care begins.",
   },
   {
     icon: Clock,
@@ -46,7 +46,7 @@ export function ProductsSection() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="The first wedge"
-          title="The tools that preserve patient context"
+          title="Tools that preserve patient context."
           description="Everything a patient needs to carry their story — and everything a care team needs to understand it."
           className="mb-16 md:mb-20"
         />

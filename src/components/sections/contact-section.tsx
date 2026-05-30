@@ -205,7 +205,7 @@ export function ContactSection() {
                 className="w-full sm:w-auto"
                 disabled={loading}
               >
-                {loading ? "Sending…" : "Send message"}
+                {loading ? "Sending…" : "Send Message"}
                 <Send className="h-4 w-4" aria-hidden />
               </LiquidButton>
             </form>

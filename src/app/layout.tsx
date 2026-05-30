@@ -15,20 +15,20 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Red Cell Systems — Intelligence for the next generation of healthcare",
+  title: "Red Cell Systems — The missing context layer for sickle cell care",
   description:
-    "AI-native biomedical intelligence. Transform fragmented healthcare information into living intelligence through knowledge graphs, AI agents, and patient-centered systems.",
+    "Red Cell Systems helps sickle cell patients preserve and carry critical health context across providers, organizations, crises, and time.",
   keywords: [
-    "biomedical intelligence",
-    "healthcare AI",
-    "clinical intelligence",
-    "knowledge graphs",
-    "patient intelligence",
+    "sickle cell disease",
+    "continuity of care",
+    "care coordination",
+    "longitudinal patient history",
+    "emergency preparedness",
   ],
   openGraph: {
     title: "Red Cell Systems",
     description:
-      "AI agents, biomedical infrastructure, and patient-centered systems designed to accelerate discovery and transform health data into living intelligence.",
+      "The longitudinal context layer for sickle cell care. Preserving patient context across providers, organizations, and crises.",
     type: "website",
     images: [{ url: "/rcs-logo.png", width: 1024, height: 1024, alt: "Red Cell Systems" }],
   },

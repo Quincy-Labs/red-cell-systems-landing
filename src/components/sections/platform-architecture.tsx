@@ -3,6 +3,29 @@
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/section-heading";
 
+const problems = [
+  {
+    title: "Fragmented History",
+    description:
+      "Critical information lives across hospitals, specialists, clinics, community organizations, and memory.",
+  },
+  {
+    title: "Repeated Storytelling",
+    description:
+      "Patients often explain the same medical history repeatedly across every care encounter.",
+  },
+  {
+    title: "Delayed Care",
+    description:
+      "Missing context can slow treatment decisions during moments when speed matters most.",
+  },
+  {
+    title: "Broken Continuity",
+    description:
+      "No trusted continuity layer follows patients across organizations, providers, and crises.",
+  },
+];
+
 export function PlatformArchitecture() {
   return (
     <section
@@ -16,33 +39,16 @@ export function PlatformArchitecture() {
       <div className="relative mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="The problem"
-          title="Context disappears when sickle cell patients need it most"
+          title="Context disappears when sickle cell patients need it most."
           description="During a pain crisis, providers may lack access to medications, care plans, prior interventions, and longitudinal history. Patients are forced to reconstruct information that healthcare systems fail to retain."
           dark
           className="mb-16 md:mb-24"
         />
 
         <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
-          {[
-            {
-              stat: "90%",
-              label: "of ER providers lack access to a sickle cell patient's existing care plan during crisis",
-            },
-            {
-              stat: "4.2x",
-              label: "average number of times patients re-explain their history per hospital encounter",
-            },
-            {
-              stat: "72%",
-              label: "of community navigators report missing context between patient touchpoints",
-            },
-            {
-              stat: "0",
-              label: "single sources of truth that follow a patient across care settings, organizations, and crises",
-            },
-          ].map((item, index) => (
+          {problems.map((item, index) => (
             <motion.div
-              key={item.stat}
+              key={item.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
@@ -53,14 +59,14 @@ export function PlatformArchitecture() {
               }}
               className="rounded-2xl border border-white/10 bg-white/[0.03] p-8"
             >
-              <p
+              <h3
                 id={index === 0 ? "problem-heading" : undefined}
-                className="font-serif text-4xl font-light text-blood md:text-5xl"
+                className="font-serif text-2xl font-light text-bone md:text-3xl"
               >
-                {item.stat}
-              </p>
+                {item.title}
+              </h3>
               <p className="mt-4 text-sm leading-relaxed text-bone/60 md:text-base">
-                {item.label}
+                {item.description}
               </p>
             </motion.div>
           ))}

@@ -1,6 +1,6 @@
 # Red Cell Systems
 
-Marketing site for Red Cell Systems — patient-owned chronic care memory infrastructure, starting with sickle cell disease.
+Marketing site for Red Cell Systems — the longitudinal context layer for sickle cell care.
 
 ## Stack
 

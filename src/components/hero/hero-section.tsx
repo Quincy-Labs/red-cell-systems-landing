@@ -42,13 +42,14 @@ export function HeroSection() {
               id="hero-heading"
               className="font-serif text-4xl font-light leading-[1.08] tracking-tight text-bone sm:text-5xl md:text-6xl lg:text-[4.25rem]"
             >
-              The missing context layer for chronic care.
+              The missing context layer for sickle cell care.
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-bone/65 md:text-xl">
               Critical health information is often scattered across providers,
               visits, and organizations. Patients become responsible for carrying
               the context healthcare systems fail to preserve. Red Cell Systems
-              helps them keep a trusted history wherever care happens.
+              helps them maintain a trusted longitudinal history wherever care
+              happens.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
               <LiquidButton href="#pilot" variant="primary" size="lg">
@@ -74,16 +75,17 @@ export function HeroSection() {
               <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-blood/20 blur-3xl" />
               <div className="absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-white/10 blur-3xl" />
               <p className="relative text-xs font-medium uppercase tracking-[0.18em] text-bone/45">
-                Living intelligence
+                Why sickle cell?
               </p>
               <p className="relative mt-4 font-serif text-2xl font-light leading-snug text-bone">
-                From fragmented records to connected understanding.
+                Crises require context. Fragmentation is especially severe.
+                Continuity has major clinical impact.
               </p>
               <ul className="relative mt-8 space-y-4 border-t border-white/10 pt-8">
                 {[
-                  "Knowledge graphs unify clinical, research, and patient data",
-                  "AI agents reason across domains with scientific rigor",
-                  "Insights surface where care and discovery meet",
+                  "Crisis history and care plans available when needed",
+                  "Longitudinal health timeline across visits",
+                  "Patient-controlled sharing with trusted partners",
                 ].map((item, i) => (
                   <motion.li
                     key={item}
