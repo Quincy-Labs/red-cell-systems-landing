@@ -2,9 +2,11 @@ import Link from "next/link";
 import { Logo } from "@/components/ui/logo";
 
 const footerLinks = [
-  { label: "Problem", href: "#problem" },
-  { label: "Product", href: "#product" },
-  { label: "Trust", href: "#trust" },
+  { label: "Thesis", href: "#thesis" },
+  { label: "Mission", href: "#mission" },
+  { label: "Platform", href: "#platform" },
+  { label: "Vision", href: "#vision" },
+  { label: "Principles", href: "#trust" },
   { label: "Pilot", href: "#pilot" },
   { label: "Contact", href: "#contact" },
 ];
@@ -18,11 +20,10 @@ export function Footer() {
         <div>
           <Logo size="md" className="text-charcoal [&_span]:text-charcoal" />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-charcoal/50">
-            The longitudinal context layer for sickle cell care.
+            Infrastructure for continuity in chronic disease.
           </p>
           <p className="mt-2 max-w-xs text-sm leading-relaxed text-charcoal/50">
-            Preserving patient context across providers, organizations, and
-            crises.
+            Beginning with sickle cell disease.
           </p>
           <p className="mt-4 text-sm text-charcoal/45">
             A product of{" "}

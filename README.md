@@ -1,6 +1,6 @@
 # Red Cell Systems
 
-Marketing site for Red Cell Systems — the longitudinal context layer for sickle cell care.
+Marketing site for Red Cell Systems — infrastructure for continuity in chronic disease, beginning with sickle cell disease.
 
 ## Stack
 
@@ -22,12 +22,6 @@ bun run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-### Contact form (Resend)
-
-Submissions are emailed to `hogedegbe@gmail.com` via [Resend](https://resend.com). Copy `env.example` to `.env.local` and set:
-
-- `RESEND_API_KEY` — from the Resend dashboard
-- `RESEND_FROM_EMAIL` — a verified sender (use `Red Cell Systems <onboarding@resend.dev>` while testing)
 
 ## Scripts
 

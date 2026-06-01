@@ -55,14 +55,14 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative px-6 py-28 md:px-10 md:py-36 lg:px-12"
+      className="relative px-6 py-36 md:px-10 md:py-48 lg:px-12"
       aria-labelledby="contact-heading"
     >
       <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-2 lg:gap-24">
         <SectionHeading
           eyebrow="Contact"
-          title="Start the conversation"
-          description="We work with organizations supporting sickle cell patients across care, navigation, advocacy, and community health. Tell us where continuity breaks down today."
+          title="Start the conversation."
+          description="Tell us where continuity breaks down today."
         />
 
         <motion.div
@@ -194,7 +194,7 @@ export function ContactSection() {
                   disabled={loading}
                   rows={4}
                   className={cn(inputClass, "resize-none")}
-                  placeholder="Tell us about the patients you serve and where context breaks down..."
+                  placeholder="Where does patient context get lost in your workflow?"
                 />
               </div>
 

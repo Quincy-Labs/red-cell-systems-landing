@@ -15,9 +15,9 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Red Cell Systems — The missing context layer for sickle cell care",
+  title: "Red Cell Systems — The longitudinal context layer for sickle cell care",
   description:
-    "Red Cell Systems helps sickle cell patients preserve and carry critical health context across providers, organizations, crises, and time.",
+    "Healthcare forgets. Patients remember. Red Cell Systems is infrastructure for preserving the context of chronic disease across providers, organizations, and time.",
   keywords: [
     "sickle cell disease",
     "continuity of care",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Red Cell Systems",
     description:
-      "The longitudinal context layer for sickle cell care. Preserving patient context across providers, organizations, and crises.",
+      "Infrastructure for continuity in chronic disease. Beginning with sickle cell disease.",
     type: "website",
     images: [{ url: "/rcs-logo.png", width: 1024, height: 1024, alt: "Red Cell Systems" }],
   },

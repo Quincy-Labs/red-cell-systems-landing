@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import {
-  Heart,
-  Users,
   Building2,
-  HandCoins,
+  Heart,
+  Handshake,
+  Users,
 } from "lucide-react";
 import { GlassCard } from "@/components/ui/glass-card";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -16,25 +16,25 @@ const audiences = [
     icon: Heart,
     title: "Patients",
     description:
-      "Repeating complex histories during crisis. Facing treatment delays because no one has the full picture. Carrying the cognitive burden that systems should hold.",
+      "Carry the full picture in memory.",
   },
   {
     icon: Users,
-    title: "Navigators & CBOs",
+    title: "Navigators & Community Organizations",
     description:
-      "Rebuilding patient history at every interaction. No continuity between touchpoints. Supporting patients without seeing what happened since last contact.",
+      "Rebuild history at every interaction.",
   },
   {
     icon: Building2,
     title: "Clinics & SCD Centers",
     description:
-      "Seeing isolated visits instead of full patient journeys. Limited visibility into crises, ER encounters, and community support that happen between appointments.",
+      "See encounters rather than journeys.",
   },
   {
-    icon: HandCoins,
-    title: "Payers & Partners",
+    icon: Handshake,
+    title: "Programs & Partners",
     description:
-      "Unable to measure continuity or outcomes because context is fragmented across providers, organizations, and time.",
+      "Lack visibility into continuity and outcomes.",
   },
 ];
 
@@ -58,16 +58,16 @@ export function WhoWeServe() {
   return (
     <section
       id="context"
-      className="relative px-6 py-28 md:px-10 md:py-36 lg:px-12"
+      className="relative px-6 py-36 md:px-10 md:py-48 lg:px-12"
       aria-labelledby="who-we-serve-heading"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Where context breaks"
+          eyebrow="The cost of fragmentation"
           titleId="who-we-serve-heading"
-          title="Everyone loses when patient memory is fragmented"
-          description="Sickle cell care involves dozens of touchpoints — ER, hematology, primary care, community organizations, navigators, payers. Context disappears at every handoff."
-          className="mb-16 md:mb-20"
+          title="Every handoff loses context."
+          description="Sickle cell care spans emergency departments, specialists, primary care, navigators, caregivers, and community organizations. Each transition creates another opportunity for information to disappear. The burden of continuity falls on the patient."
+          className="mb-20 max-w-4xl md:mb-24"
         />
 
         <motion.div

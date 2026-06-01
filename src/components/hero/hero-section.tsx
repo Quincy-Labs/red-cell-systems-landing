@@ -3,7 +3,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
-import { GlassCard } from "@/components/ui/glass-card";
 import { LiquidButton } from "@/components/ui/liquid-button";
 import { HeroVideoBackground } from "@/components/hero/hero-video-background";
 
@@ -20,94 +19,55 @@ export function HeroSection() {
     <section
       ref={ref}
       id="hero"
-      className="relative min-h-[100svh] overflow-hidden bg-charcoal"
+      className="relative min-h-svh overflow-hidden bg-charcoal"
       aria-labelledby="hero-heading"
     >
       <HeroVideoBackground />
 
       <motion.div
         style={{ y, opacity }}
-        className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-6 pb-24 pt-32 md:px-10 md:pt-40 lg:px-12"
+        className="relative z-10 mx-auto flex min-h-svh max-w-7xl flex-col justify-center px-6 pb-40 pt-32 md:px-10 md:pb-44 md:pt-36 lg:px-12"
       >
-        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
-          <motion.div
-            initial={{ opacity: 0, y: 32 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+        <motion.div
+          initial={{ opacity: 0, y: 32 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          className="max-w-4xl"
+        >
+          <p className="mb-8 text-xs font-medium uppercase tracking-[0.22em] text-bone/50">
+            Continuity of care, preserved
+          </p>
+          <h1
+            id="hero-heading"
+            className="font-serif text-4xl font-light leading-[1.08] tracking-tight text-bone sm:text-5xl md:text-6xl lg:text-[4.25rem]"
           >
-            <p className="mb-6 text-xs font-medium uppercase tracking-[0.22em] text-bone/50">
-              Continuity of care, preserved
+            Health unfolds across years.
+            <br />
+            Care happens in moments.
+          </h1>
+          <div className="mt-10 max-w-2xl space-y-6 text-lg leading-relaxed text-bone/65 md:mt-12 md:text-xl">
+            <p>
+              The most important information in chronic disease often exists
+              between encounters.
             </p>
-            <h1
-              id="hero-heading"
-              className="font-serif text-4xl font-light leading-[1.08] tracking-tight text-bone sm:text-5xl md:text-6xl lg:text-[4.25rem]"
-            >
-              The missing context layer for sickle cell care.
-            </h1>
-            <p className="mt-8 max-w-xl text-lg leading-relaxed text-bone/65 md:text-xl">
-              Critical health information is often scattered across providers,
-              visits, and organizations. Patients become responsible for carrying
-              the context healthcare systems fail to preserve. Red Cell Systems
-              helps them maintain a trusted longitudinal history wherever care
-              happens.
+            <p>
+              Red Cell Systems is building infrastructure that preserves patient
+              context across providers, organizations, and time.
             </p>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <LiquidButton href="#pilot" variant="primary" size="lg">
-                Join the Pilot
-                <ArrowRight className="h-4 w-4" aria-hidden />
-              </LiquidButton>
-              <LiquidButton href="#product" variant="ghost" size="lg">
-                See the Emergency Passport
-              </LiquidButton>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="relative hidden lg:block"
-          >
-            <GlassCard
-              variant="dark"
-              className="relative overflow-hidden border-white/15 p-8"
-            >
-              <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-blood/20 blur-3xl" />
-              <div className="absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-white/10 blur-3xl" />
-              <p className="relative text-xs font-medium uppercase tracking-[0.18em] text-bone/45">
-                Why sickle cell?
-              </p>
-              <p className="relative mt-4 font-serif text-2xl font-light leading-snug text-bone">
-                Crises require context. Fragmentation is especially severe.
-                Continuity has major clinical impact.
-              </p>
-              <ul className="relative mt-8 space-y-4 border-t border-white/10 pt-8">
-                {[
-                  "Crisis history and care plans available when needed",
-                  "Longitudinal health timeline across visits",
-                  "Patient-controlled sharing with trusted partners",
-                ].map((item, i) => (
-                  <motion.li
-                    key={item}
-                    initial={{ opacity: 0, x: -8 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.5 + i * 0.12 }}
-                    className="flex gap-3 text-sm leading-relaxed text-bone/70"
-                  >
-                    <span
-                      className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blood"
-                      aria-hidden
-                    />
-                    {item}
-                  </motion.li>
-                ))}
-              </ul>
-            </GlassCard>
-          </motion.div>
-        </div>
+          </div>
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center md:mt-12">
+            <LiquidButton href="#pilot" variant="primary" size="lg">
+              Join the Pilot
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </LiquidButton>
+            <LiquidButton href="#platform" variant="ghost" size="lg">
+              Explore Emergency Passport
+            </LiquidButton>
+          </div>
+        </motion.div>
       </motion.div>
 
-      <div className="absolute inset-x-0 bottom-0 z-10 h-40 bg-gradient-to-t from-bone via-bone/80 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 z-10 h-40 bg-linear-to-t from-bone via-bone/80 to-transparent" />
     </section>
   );
 }

@@ -9,11 +9,11 @@ import { LiquidButton } from "@/components/ui/liquid-button";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { label: "Problem", href: "#problem" },
-  { label: "Product", href: "#product" },
-  { label: "Trust", href: "#trust" },
+  { label: "Thesis", href: "#thesis" },
+  { label: "Platform", href: "#platform" },
+  { label: "Vision", href: "#vision" },
+  { label: "Principles", href: "#trust" },
   { label: "Pilot", href: "#pilot" },
-  { label: "Contact", href: "#contact" },
 ];
 
 export function Navbar() {

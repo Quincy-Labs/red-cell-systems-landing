@@ -9,7 +9,7 @@ export function PilotProgram() {
   return (
     <section
       id="pilot"
-      className="relative overflow-hidden px-6 py-28 md:px-10 md:py-36 lg:px-12"
+      className="relative overflow-hidden px-6 py-36 md:px-10 md:py-48 lg:px-12"
       aria-labelledby="pilot-heading"
     >
       <FloatingCell
@@ -29,8 +29,8 @@ export function PilotProgram() {
         >
           <SectionHeading
             eyebrow="Pilot program"
-            title="Help shape the future of continuity of care."
-            description="We are co-designing workflows with organizations that serve sickle cell patients — learning from real care environments to build tools that work."
+            title="Help shape the future of continuity in sickle cell care."
+            description="We are partnering with organizations serving sickle cell patients to understand where continuity breaks down and how it can be improved."
             align="center"
             className="mx-auto"
           />
@@ -39,18 +39,16 @@ export function PilotProgram() {
             id="pilot-heading"
             className="mx-auto mt-8 max-w-2xl text-center text-base leading-relaxed text-charcoal/60 md:text-lg"
           >
-            Community-based organizations, sickle cell centers, clinics,
-            navigation programs, and advocacy groups — if your team supports
-            sickle cell patients and continuity is a challenge, we want to build
-            with you.
+            If your team supports patients across care, navigation, advocacy, or
+            community health, we would love to hear from you.
           </p>
 
           <ul className="mx-auto mt-8 max-w-xl space-y-3 text-sm text-charcoal/55 md:text-base">
             {[
-              "Early access to Emergency Passport and Crisis Timeline",
-              "Dedicated support during pilot",
-              "Direct founder feedback channel",
-              "No cost during pilot phase",
+              "Early access to Emergency Passport",
+              "Direct collaboration with our team",
+              "A voice in how the platform evolves",
+              "No cost during the pilot",
             ].map((benefit) => (
               <li key={benefit} className="flex gap-3">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blood" aria-hidden />
